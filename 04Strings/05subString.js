@@ -29,3 +29,11 @@ console.log(`substring with trim ... ${substring2}`)
 
 //  upperCase & lowerCase
 
+let message = "jelloi ajfsdhjkaAAASFUEHIUEGjkadjkshg"
+console.log(`toLowerCase ${message.toLowerCase()}`)
+console.log(`toUpperCase ${message.toUpperCase()}`)
+
+
+
+
+//  ----------------

@@ -21,21 +21,29 @@ console.log(`check whens serached - given.. ${check}`);
 // --------------------------------------
 
 
-const message= "hello ha "
-let vowels = 'aeiou'
-let flag = true;
+const message= "hellaeiouo ha "
+// let flag = 'ehll';
 const vowelsPresent = (m) => {
-    for(let char of m ){
-        if(vowels.includes(char)){
-            flag = true
-            break;
-        }else{
-            flag = false
-        }
-        
-    }
+let flag = true
+let s = m.toLowerCase()
+let vowels = 'aeiou'
+let arr=[]
+for(let char of message){
+    if(arr.includes(char)){
+        continue
+     }else if(vowels.includes(char)){
+        arr.push(char)
+     }
+
 }
-let res = flag ? "vowels are present" :"not present "
+console.log(arr)
+const output = arr.length== 5 ? true:false
+return output
+   
+}
+// console.log(flag)
+let res = vowelsPresent(message)
+console.log(res)
 console.log(`res is ${res}`)
 
 

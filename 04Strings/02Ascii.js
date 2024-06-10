@@ -25,19 +25,25 @@ let index3 = 3
 let char = message.charAt(index)
 let char2 = message.charAt(index2)
 let char3 = message.charAt(index3)
-
+console.log(`char is ${char}`)
+console.log(`char2 is ${char2}`)
+console.log(`char3 is ${char3}`)
 // to find the ascii value for a code 
+console.log(`--------`)
 
 let asciiCode = message.charCodeAt(index)
 let asciiCode2 = message2.charCodeAt(index2)
 let asciiCode3 = message3.charCodeAt(index3)
+console.log(`--------`)
+console.log(`ascii code fo ${asciiCode}`)
+console.log(`ascii code2 fo ${asciiCode2}`)
+console.log(`ascii code3 fo ${asciiCode}3`)
 
 
 
 console.log(`asciiCode of char '${char}' is ${asciiCode} and it's value is `)
 console.log(`asciiCode of char '${char2}' is ${asciiCode2}`)
 console.log(`asciiCode of char '${char3}' is ${asciiCode3}`)
-
 
 
 // ..

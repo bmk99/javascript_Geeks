@@ -47,9 +47,9 @@ console.log(`asciiCode of char '${char3}' is ${asciiCode3}`)
 
 
 // ..
-let char4 = "A"
-let index5 = 65
-console.log(`the ascci value of ${index5} is ${String.fromCharCode(index5)}`)
-console.log(`the accii code for char ${char4} is ${char4.charCodeAt()}`)
+let character = "A"
+let number = 65
+console.log(`the ascci value of ${number} is ${String.fromCharCode(number)}`)
+console.log(`the accii code for char ${character} is ${character.charCodeAt()}`)
 
 

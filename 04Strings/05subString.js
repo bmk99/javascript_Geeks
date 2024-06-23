@@ -14,7 +14,7 @@ console.log(substring)
 //  trim................. 
 
 
-let name2 = '          helloo ha ..........where are u          '
+let name2 = '          helloo ha ..........where are              '
 
 let trimName = name2.trim()
 console.log(name2)

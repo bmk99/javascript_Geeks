@@ -9,6 +9,14 @@ fruits.push("melons", "strawberry", "vonkay ");
 const fruits1 = [];
 console.log(fruits);
 
+// NOTE : 
+// when  using template literal array implicitly converted into toString,
+console.log(fruits)
+console.log(fruits.toString())
+console.log(`by using the template literla 
+            ${fruits}`)
+
+
 // ______________________________________________________________
 // concat
 // .concat(elem1,elem2,....)
@@ -42,6 +50,8 @@ console.log(`-----slice`);
 const items = ["pepsi", "sprite", "thumsup ", "mango", "orange"];
 let sliceDrinks = items.slice(0, 3); // upto before 3rd index it will slice means it prints 0 to 2
 let slicedFruits = items.slice(3); // start from 3 to end if not mentioned anything
+console.log(sliceDrinks)
+console.log(sliceDrinks.toString())
 console.log(`sliceDrinks ${sliceDrinks}`);
 console.log(`slicedFruits  - ${slicedFruits}`);
 

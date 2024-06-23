@@ -12,12 +12,12 @@
 
 //  it will print the index of the letter in the text if found                               , else if it doesn't found  return -1 .. represents not present
 
-let sentence ="starship leads to mars someday definetly"
+let sentence ="starship leads to mars someday definetly,let's go to mars"
 console.log("hello hea".indexOf("e"))
 console.log("first".indexOf("z"))
 console.log(sentence.indexOf("@"))
-console.log(`mars position from starting ...${sentence.indexOf("mars")}`)
-console.log(`mars position after 18 index.. ${sentence.indexOf("mars",19)}`)//  mars position start at 
+console.log(`mars position from starting ...${sentence.indexOf("mars")}`)//
+console.log(`mars position after 18 index.. ${sentence.indexOf("mars",19)}`)//  mars position start from 19 .
 
 
 // -- 

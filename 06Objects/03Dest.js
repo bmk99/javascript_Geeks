@@ -179,3 +179,27 @@ console.log(`person emp2 - `, perEmp2);
 
 console.log(`youtube - `, youEmp1);
 console.log(`youtube emp2 - `, youEmp2);
+//  ----------------
+
+// calling the object /
+
+const GamesDetails ={
+  cricket :11,
+  volleyball : 6,
+  kabaddi:7,
+  tabletennis :1,
+  football :11,
+
+}
+
+const entries = Object.entries(GamesDetails)
+console.log(entries) // it wil give key and values in the form of arrays
+
+const keys = Object.keys(GamesDetails)
+console.log(keys) // keys or properties or member.
+const values = Object.values(GamesDetails)
+console.log(values) // only values
+console.log(Math.max(...values)) // from the array we can get the math properties //
+
+
+

@@ -5,6 +5,7 @@
 //  statements................
 // }
 // for loop will excute up to condition is false .........
+// 
 
 for(let i=1;i<=7;i++){
     console.log(`i value is `, i)
@@ -29,6 +30,7 @@ for(;i<=1;){
 
 }
 //  at the starting the conditon itself false..........
+
 console.log('after for looop ........ ')
 
 // --- in case of string also 

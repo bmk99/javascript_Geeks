@@ -10,7 +10,7 @@ function sum(min,max){
 
 console.log(sum(10,20))
 
-function call(name,city = "no city")// parameters from the call
+function call(name,city = "no city")// parameters from the call // city given default value..
 {
     console.log(`my name is ${name}`)
     console.log(`my city is ${city}`)

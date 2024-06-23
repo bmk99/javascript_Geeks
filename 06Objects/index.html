@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arc Hover Effect with Radial Gradient</title>
+    <style>
+      .box {
+        position: relative;
+        width: 200px;
+        height: 400px;
+        background-color: rgb(125, 124, 124);
+        overflow: hidden;
+      }
+      .icon-box::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 0 0 0 100%;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+      }
+      .box:hover .icon-box {
+        opacity: 0%; /* Hide red arc on hover */
+    }
+
+      .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -50px;
+        bottom: -50px;
+        left: 0;
+        background: radial-gradient(
+          circle at top right,
+          #00008b 0%,
+          #00008b 50%,
+          transparent 50%
+        );
+        transform: scale(0);
+        transform-origin: top right;
+        transition: all 1s ease-in-out;
+        z-index: 0;
+      }
+
+      .box:hover::before {
+        transform: scale(2);
+      }
+
+      .box-content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+        <div class="icon-box"></div>
+      <div class="box-content">
+        Hover over me
+      </div>
+    </div>
+    <script src="./04Objthis.js"></script>
+  </body>
+</html>

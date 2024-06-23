@@ -45,17 +45,24 @@ obj1.details();
 //   computed property
 console.log(`------------ `);
 
+let country ="country"
 const obj2 = {
   name: "ha",
   city: "hyderabad",
+  [country]:"india"
 };
 
 console.log(`obj2 is  ${obj2}`); // in template literla it will convert into the to stringify..
 console.log(obj2);
-obj2.age = 25; // commuted property
+obj2.age = 25; // commuted property // to calculate or assign something or to determine ... 
 console.log(obj2);
 obj2["interst"] = "travelling";
 console.log(obj2);
+const job = 'job'
+obj2[job]="software" // dynamically or not ???...
+console.log(obj2)
+
+
 
 // shorthand for object
 
@@ -79,3 +86,4 @@ function meetInfo(place, time) {
 const res2 = meetInfo("dlf", "evening");
 console.log(res2);
 console.log(`callin ge the res2 ---${res2.place}`);
+

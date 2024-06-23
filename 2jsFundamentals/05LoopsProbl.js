@@ -89,9 +89,6 @@ for(let i=0;i<myName.length;i++){
 
 
 
-
-
-
 //  while problem .....
 
 let number = 12

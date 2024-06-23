@@ -8,7 +8,7 @@ let message2 = "hello i felt like no.. to ha"
 // in the includes the substring exactly matched in the strign we comparing....
 console.log(message2.includes("no"))
 console.log(message2.indexOf("no"))
-console.log(message2.includes("no",19)) // searching the no after 19 th posiotno
+console.log(message2.includes("no",19)) // searching the no after 19 th posiot   no
 console.log(message2.includes("yes")) // | not presetnt 
 
 
@@ -21,14 +21,14 @@ console.log(`check whens serached - given.. ${check}`);
 // --------------------------------------
 
 
-const message= "hellaeiouo ha "
+const message= "SADFHJ AJKSDHJkjajksdjkfaeiou"
 // let flag = 'ehll';
 const vowelsPresent = (m) => {
 let flag = true
 let s = m.toLowerCase()
 let vowels = 'aeiou'
 let arr=[]
-for(let char of message){
+for(let char of s){
     if(arr.includes(char)){
         continue
      }else if(vowels.includes(char)){
@@ -44,7 +44,7 @@ return output
 // console.log(flag)
 let res = vowelsPresent(message)
 console.log(res)
-console.log(`res is ${res}`)
+console.log(`res is  ${res}`)
 
 
 

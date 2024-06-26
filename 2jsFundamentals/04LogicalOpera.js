@@ -44,7 +44,7 @@ if (!eligible) {
 
 // _______________________-
 // ---------  ?? NULLISH OPERATOR-----------
-//  it only works when some value is ()== undefined ==) or(== null == ) then it will log the other value
+//  it only works when some value is undefined or null otherwise it will log the other value
 
 let car = "tata"
 let bike = undefined
@@ -54,8 +54,8 @@ let rating = 0
 console.log(car ?? "car name is not mentioned")
 console.log(bike ?? "bike--- name is not mentioned ")
 console.log(suv ?? "suv---- name not mentioned.")
-console.log(price ||  "by using or --price not revieled yet wait for some time") // here if we use ==OR== operator so boolean of ==0== is false so  it will print the message 
-console.log(price ?? "price not revieled yet wait for some time") // here if we are not using ==OR== operator becaz it will print the message so to avoid in this cases we use nullish
+console.log(rating ||  "by using or --rating not revieled yet wait for some time") // here if we use _OR_ operator ,so boolean of _0_ is false so  it will print the message 
+console.log(rating ?? "price not revieled yet wait for some time") // here if we are not using _OR_ operator becaz it will print the message so to avoid in this cases we use nullish
 
 
 
@@ -136,7 +136,7 @@ console.log(price ?? "price not revieled yet wait for some time") // here if we 
 // _____________________________________________________________
 
 // --------------AND OPEERATOR CASES .....................
-// while running comment all the cases and uncommen only which you want to check
+// while running comment all the cases and uncomment only which you want to check
 
 // //  here logic is what will do the=== AND ====operator generallly ................
 // // when ==AND== operator stops checking (like when it satisfy or break ...) while compiling

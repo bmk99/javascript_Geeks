@@ -11,6 +11,7 @@ for (let key in obj1) {
   console.log(`key is  -${key}- and value is -${obj1[key]}- `);
 }
 
+
 // remaining for loops willnot work in objects.........
 
 // shallow coppping ...
@@ -40,30 +41,25 @@ let person1 = {
   age: 25,
   address: { city: "hyderabad", state: "andhra pradesh" }, //| nested object
 };
-console.log(` original one before changing`,person1)
+console.log(` original one before changing`, person1);
 let person2 = Object.assign({}, person1);
 
 person2.name = "person2";
 
 person2.address.city = "chennai";
 person2.address.state = "tamilandu";
-console.log(`original - after changingin person2 ,,  address only changes not name  `, person1);
+console.log(
+  `original - after changingin person2 ,,  address only changes not name  `,
+  person1
+);
 console.log(`copying by assing changing address...`, person2);
 
 //  deep copy when we use json stringify .. then nested objects  also changes..
+// __ pending deep copy ..
 
+let person3 = JSON.parse(JSON.stringify(person1));
 
-let person3 = JSON.parse(JSON.stringify(person1))
-
-person3.
-
-
-
-
-
-
-
-
+// person3.
 
 // ---optional chaining --  ?.
 // if a property in a object is not defined, when we call, it throws undefined.......

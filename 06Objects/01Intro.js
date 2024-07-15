@@ -20,9 +20,9 @@ console.log(`name iscalled by using the dot --- ${details.name}`);
 console.log(`calling the years of experience by using bracket-- 
     ${details["years of experience"]}`);
 console.log(`salary by bracket --  ${details["salary_per_Annum"]}`);
-console.log(`key not present in ${details.age}`);
+console.log(`key not present in so - ${details.age}`);
 console.log(details.openings);
-console.log(`adress in the form of object ${details.address}`);
+console.log(`adress in the form of object --${details.address}`);
 console.log(
   `adress in the form of object calling .. ${details.address.HouseNO}`
 );
@@ -40,6 +40,7 @@ const obj1 = {
 };
 
 obj1.displaInfo();
+obj1["displaInfo"]();// we call the method like this also.
 obj1.details();
 
 //   computed property

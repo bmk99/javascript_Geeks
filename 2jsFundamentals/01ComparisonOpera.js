@@ -57,6 +57,7 @@ console.log("3----------")
 //  it will check the type of the value then it will proceed 
 
 
+
 console.log("0" === 0)
 console.log("01" !== 1)
 

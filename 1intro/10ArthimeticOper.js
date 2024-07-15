@@ -33,3 +33,8 @@ console.log(x ** 2)
 console.log(a ** 2)
 
 // N- for the a and b values when try to use operators it shows NaN(not a integer)
+
+let s = 9
+console.log(++s)
+console.log(++s)
+console.log(s)

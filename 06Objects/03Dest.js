@@ -15,7 +15,7 @@ console.log(`person0 --`, person0);
 
 // error // check start destrucring
 // const {username , location,profession, films,Likes} = person0 // it is not same as we do in the arrayss.. here we need to give the keys present in that object.
-// console.log(`after destructing the person1 like we do in array -- thrwos undefined`)
+// console.log(`after destructing the person1 like we do in array -- throws undefined`)
 // console.log(username)
 // console.log(location)
 // console.log(profession)
@@ -86,7 +86,7 @@ console.log(`person 2 `, person2);
 console.log(`education --`, education);
 console.log(`remaining -`, rest);
 
-// ------------------------------------
+// -----------------------------------------------------------------
 console.log(`-------------
     info 3 `);
 const person3 = {
@@ -115,7 +115,7 @@ console.log(`contact x`, x);
 
 console.log(`inside the games array calling by destructing == `, game1); // by array destrucritng
 
-// -------------------
+// ------------------------------------------------------------------
 
 console.log(`----------
     info 5`);
@@ -193,10 +193,11 @@ const GamesDetails ={
 }
 
 const entries = Object.entries(GamesDetails)
-console.log(entries) // it wil give key and values in the form of arrays
+console.log(entries) // it wil give key and values in the form of arrays as 
+// key and value in array,, like that..
 
 const keys = Object.keys(GamesDetails)
-console.log(keys) // keys or properties or member.
+console.log(keys) // keys or properties or member. return in the form of arrays
 const values = Object.values(GamesDetails)
 console.log(values) // only values
 console.log(Math.max(...values)) // from the array we can get the math properties //

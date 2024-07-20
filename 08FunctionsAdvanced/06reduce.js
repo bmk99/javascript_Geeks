@@ -27,10 +27,24 @@ console.log("toatal score ---------------")
   const scores = [1,2,3,4,5,6,5]
   scores.push(9)
   const totalScore = scores.reduce((accumulator,score)=>{
+    console.log(accumulator,score)
     return accumulator +=score
 
-  },0)
+  },10)
   console.log({totalScore})
+
+  // 
+  console.log("toatal score -----with out giving the intial accumulator--------")
+  // when accumulator not given it will take the 
+
+  const scores1 = [1,2,3,4,5,6,5]
+  scores1.push(9)
+  const totalScore2= scores1.reduce((accumulator,score)=>{
+    console.log(accumulator,score)
+    return accumulator +=score
+
+  })
+  console.log({totalScore2})
 
 
 //  add the toatal price in the objects 
@@ -139,7 +153,6 @@ const arrayGlasses_toObject = Object.fromEntries(arrayGlasses)
 console.log(arrayGlasses_toObject)
 
 
-
 // usage of reduce for objects...
 //  for objects .. 
 const plates ={
@@ -147,10 +160,29 @@ const plates ={
   vonk:453,
   one :234,
 }
+const initialAccumulatorValue1 = 0
 const totalPlates = Object.entries(plates).reduce((accumulaotr,[key,value])=>{
- 
+  console.log(`accumulator - `,accumulaotr,`   , value - ${value}`)
 
  return accumulaotr += value
 
-},0)
+},initialAccumulatorValue1)
 console.log(totalPlates)
+
+console.log(`without giving the accumulator`)
+// when accumulator not given 
+const plates1 ={
+  nasik:100,
+  vonk:453,
+  one :234,
+}
+const initialAccumulatorValue2 = 0
+const totalPlates1 = Object.entries(plates1).reduce((accumulaotr,[key,value])=>{
+console.log(`accumulator - `,accumulaotr,`   , value - ${value}`)
+ return accumulaotr += value
+
+})
+console.log(totalPlates1)
+
+
+// ---for coverting array to string

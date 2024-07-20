@@ -19,7 +19,7 @@ const reamainderAfterDivisionSeven= number % 7
 
 
 
-// if and else or else if are the defensicve condtions 
+// if and else or else if are the defensive condtions 
 // ----------------------
 // if(reamainderAfterDivisionThree == 0 ){
 //     console.log("aaaaaaaaa")
@@ -41,7 +41,7 @@ const reamainderAfterDivisionSeven= number % 7
 // if(reamainderAfterDivisionFive == 0){
 //     console.log("bbbbbbbbbb")
 // }
-// __________
+// _________
 // *************or **************************
 
 // --------------------------

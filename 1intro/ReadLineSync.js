@@ -23,5 +23,5 @@ var rl =readlineSync.createInterface(process.stdin, process.stdout)
 
 r1.question("what is your city ",(city)=> console.log(`my city is ${city}`))
 
-//  for runnign this we have to use node file-name
-//  error -----------------------------
+//| for runnign this we have to use open terminal 
+//| node file-name

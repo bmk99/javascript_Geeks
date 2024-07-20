@@ -25,7 +25,7 @@ console.log(vote) // -> true
 // ____undefined____
 
 let value;
-console.log(value) // -> undefined 
+console.log(value) // -> undefined
 
 
 // ___(null)_______

@@ -10,13 +10,12 @@ function sum(min,max){
 
 console.log(sum(10,20))
 
-function call(name,city = "no city")// parameters from the call // city given default value..
-{
+function call(name,city = "no city"){// parameters from the call // city given default value..
     console.log(`my name is ${name}`)
     console.log(`my city is ${city}`)
     console.log(`-------------`)
 }
-call("kiraha","hyderabad")
+call("kiraha","hyderabad") // arguments ... passing to the function 
 call("aha","")
 call("mimbai","maharastra")
 
@@ -46,11 +45,13 @@ func()
 
 
 // return about...........
-function returned(n,a){
-    return n * a 
+function returned(n,a,b,c,d,e,f){
+    console.log(f)
+    return n * 3
+
      console.log(first) // after return nothing can execute..return defines end of the function 
 
 }
-returned(12,12) // doesn't print anything .....  when function was returning something..it should store in some valuable
+returned(12,12,234,2342,34222) // doesn't print anything .....  when function was returning something..it should store in some valuable
 
 console.log(returned(12,12))

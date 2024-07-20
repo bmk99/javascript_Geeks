@@ -1,9 +1,10 @@
 //  converting from one type into the other '
 //  to string 
 //  to number 
-// to boolean 
+//  to boolean 
 
-// _to Number
+// ---string to Number
+
 let a = "10"
 let b = "30"
 
@@ -16,9 +17,11 @@ console.log(typeof b)
 console.log(typeof c)
 console.log(typeof d)
  
-
+console.log(parseInt(5/2))
+console.log(typeof(2.43))
 console.log("--------------------")
-//  _ to String 
+
+//  --- Number  to String 
 
 let e = 34
 let f =8
@@ -28,12 +31,13 @@ let h = String(f)
 
 console.log(typeof e)
 console.log(typeof f)
+console.log('after converting')
 console.log(typeof g)
 console.log(typeof h)
 
 console.log("--------------------")
 
-//  _ to boolean 
+//  -- number ,string -to boolean 
 let i = 0 
 let j = 23
 let k = "34"
@@ -45,7 +49,7 @@ let o = Boolean(k)
 let p = Boolean(l)
 
 
-//  n - 0 is not a number i.e it shows false but remaing nunber values is true
+//  Note: - 0 is not a number i.e it shows false but remaing nunber values is true
 console.log(m)
 console.log(n)
 console.log(o)

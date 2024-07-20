@@ -15,7 +15,7 @@ const star = "*"
 //     console.log("*".repeat(i))
 // }
 let count =0
-for(let i=6;i>10,i--,i>2&&i<10,i++,i>7;){
+for(let i=6;i<10,i--,i>2&&i<10,i++,i<8,i<12;i++){
     console.log(i)
     count++
 }
@@ -57,19 +57,6 @@ console.log(`odd ------${o}`)
 
 
 
-//  for finding the properties and methods in a string....
-
-
-    console.log(Object.getOwnPropertyNames(String.prototype));
-    
-    let stringMethods = Object.getOwnPropertyNames(String.prototype).filter(function(prop) {
-        return typeof String.prototype[prop] === 'function';
-    });
-    
-    console.log(stringMethods);
-// ---------------
-
-
 
 //  for finding the charcters either present in or not 
 
@@ -98,4 +85,15 @@ while (number <=50){
 console.log(`number ..is ${number}`)
 
 
+
+
+
+// do and while 
+//  first it will do then check in the while . 
+let i = 6
+do{
+    console.log(i)
+    i++
+
+}while(i<6)
 

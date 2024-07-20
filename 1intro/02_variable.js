@@ -6,8 +6,7 @@ console.log(number)
 // let name 
 // console.log(name)
 
-// error  becaz while using the const we must declare and intialize ...
-// const name1
+// const name1    // error  becaz while using the const we must declare and intialize ...
 // console.log(name1)
 
 
@@ -59,15 +58,20 @@ var x;     // Declaration
 x = 5;     // Assignment
 x = 10;    // Reassignment
 
+
 let y;     // Declaration
 y = 20;    // Assignment
 y = 25;    // Reassignment
 
 const z = 30; // Declaration and initialization
-// z = 35;   // Error: Assignment to constant variable
+
+// Check
+// z = 35;   
+console.log(z) // Error: Assignment to constant variable
 
 
 // example : 
+// -------------------->var
 
 console.log("------------- var")
 call
@@ -83,6 +87,7 @@ console.log("outsie city with var reaassigned ", city )
 country =" India"
 var country
 
+
 function checkVar(){
     
     console.log("inside     ",country)
@@ -90,15 +95,15 @@ function checkVar(){
 checkVar()
 console.log("ouside  ",country)
 
-// ----------------------
-console.log("--------let")
-//  let 
+// ---------------------->let
 
-//  error >
+//  error >s
+
 // call1
-// console.log("dentifier given without the keyword- let",call1) // Error: becaz Cannot access 'call1' before initialization
+// console.log(call1) // Error: Identifier declared without the keyword becaz Cannot access 'call1' before initialization
 // let call1
-// error |
+
+//  error |e
 
 let city1 // declare 
 console.log("not assigned city1 -->",city1)
@@ -117,24 +122,31 @@ function checkLet(){
 }
 checkLet()
 
+
 //  error
+
 // console.log("outside city 2", city2) // error we can't call when it is declared inside the function 
 //  let is function scope only 
 
 
-//  const 
+// ------->const 
 
-// error --> 
+// error -->s
+
 // const city4
 // console.log(city4)// Error: we cann't acces without intiaizaion,,,Missing initializer in const declaration
-// Error --|-
+
+// error --|e
 
 const city3 = "bangalore"
 
-//  error >
+//  error  >s
+
 // city3 = "south bengaluru"  //Error:Assignment to constant variable ---- we can't reassigned the values ...
 // console.log(city3)
-// error |
+
+//  error  |e
+
 function checkConst() {
 
     console.log("inside with const", city3)
@@ -142,8 +154,10 @@ function checkConst() {
     console.log("inside the city4 with const",city4)
 }
 
-//  error   >  
-// console.log(city4) // const also block scope we can't acces
-// error    |
+//  error   >s
+
+// console.log(city4) // const also block scope we can't access
+
+// error    |i
 
 

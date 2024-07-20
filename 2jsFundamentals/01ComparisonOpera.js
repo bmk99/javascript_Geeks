@@ -65,16 +65,31 @@ console.log("01" !== 1)
 
 
 console.log("4---------")
-// comparing with the null 
-// while compiling  null is converting into 0 
-console.log(null > 0 )
-
-console.log(null < 1)
+// comparing with the `null` 
 
 
+//  commparing with equal 
 console.log(null  == 0)
 
 console.log(null === 0 )
 
 console.log(null == undefined)
+
+
+// while compiling  `null` is converting into `0` 
+console.log(null > 0 )
+
+console.log(null < 1)
+
+
+//  ... Bollean of some values 
+console.log(`Boolean of 0`,Boolean(0))
+console.log(`Boolean of undefined`,Boolean(undefined))
+console.log(`Boolean of null`,Boolean(null))
+console.log(`Boolean of empty string`,Boolean(""))
+console.log(`Boolean of number`,Boolean(9))
+console.log(`Boolean of any acii value`,Boolean(" "))
+console.log(`Boolean of any false`,Boolean(false))
+console.log(`Boolean of any true`,Boolean(true))
+
 

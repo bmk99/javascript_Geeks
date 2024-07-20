@@ -22,12 +22,17 @@ console.log(`squareMinRes through the higher order`,squareMinRes)
 
 const arr2= [1,2,3,4,5,]
 
-function squareMap(num) {
+function squareMap(num,index,array) {
+    console.log(num)
+    console.log(index)
+    console.log(thisArg.num)
   return num ** 2;
 }
 
-const res = array.map(squareMap);
+const res = arr2.map(squareMap);
 console.log(`through the map .. passing `);
 
-const res2 = array.map(num => num **2)
+const res2 = arr2.map(num => num **2)
 console.log(res2)
+
+

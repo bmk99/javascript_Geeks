@@ -25,6 +25,7 @@ let index3 = 3
 let char = message.charAt(index)
 let char2 = message.charAt(index2)
 let char3 = message.charAt(index3)
+
 console.log(`char is ${char}`)
 console.log(`char2 is ${char2}`)
 console.log(`char3 is ${char3}`)
@@ -34,10 +35,12 @@ console.log(`--------`)
 let asciiCode = message.charCodeAt(index)
 let asciiCode2 = message2.charCodeAt(index2)
 let asciiCode3 = message3.charCodeAt(index3)
+
 console.log(`--------`)
+
 console.log(`ascii code fo ${asciiCode}`)
 console.log(`ascii code2 fo ${asciiCode2}`)
-console.log(`ascii code3 fo ${asciiCode}3`)
+console.log(`ascii code3 fo ${asciiCode}`)
 
 
 
@@ -47,9 +50,11 @@ console.log(`asciiCode of char '${char3}' is ${asciiCode3}`)
 
 
 // ..
-let character = "A"
+let character = "Asdfas"
 let number = 65
-console.log(`the ascci value of ${number} is ${String.fromCharCode(number)}`)
+console.log(`the ascci value of ${number} is ${String.fromCharCode(97)}`)
 console.log(`the accii code for char ${character} is ${character.charCodeAt()}`)
+console.log(`the accii code for char ${character} is ${"Z".charCodeAt()}`)
+
 
 

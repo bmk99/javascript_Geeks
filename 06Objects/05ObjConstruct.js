@@ -30,9 +30,9 @@ user2.greet()
 user3.greet() 
 
 
-// writing  the same function inside will makes complicated.... 
+// writing  the same function inside all three objects will makes complicated..... 
 
-//  -- way2 ---
+//  ----- way2 -----
 console.log(`
     way2 ----same calling the function in reduce way
     `)
@@ -91,19 +91,20 @@ function welcome(age,dob) {
 }
 
 console.log(`way3 --function call 
-    `)//  all here we did is explicitly .... calling 
+    `)
+//  all here we did is explicitly .... calling 
 console.log(human1) 
 //| now i want ot call the welcome function with object human1
 // so ..
 // welcome.call(25,1999) // error function will run this.name is undefined 
-welcome.call(human1,25,1999)  // first one should me object ,, then arguments for the function, ..... here we are just attaching the function to the objects
+welcome.call(human1,25,1999)  // first one should be the object,from that we will log the values in the welcome function . ,, then arguments for the function, ..... here we are just attaching the function to the objects
 welcome.call(human2,27,1998)
 console.log(human1) // object wouldn't change
 
 console.log(`way3 apply 
     `)
 
-// function.apply(object, [argument1,argument2,...]) // suntax for apply ...here arguments are passed in the form of array .. 
+//syntax -  function.apply(object, [argument1,argument2,...]) // suntax for apply ...here arguments are passed in the form of array .. 
 welcome.apply(human1,[30,1994]) // after object, arguments are passed in the form of array 
 welcome.apply(human2,[32,2939])
 
@@ -111,23 +112,29 @@ welcome.apply(human2,[32,2939])
 console.log(`way3 bind 
     `)
 
-//const res = function.bind(object,argument1,argument2) // arguments passing are optional we can pass in the returned function also but object is neccessary 
+
+// syntax -const res = function.bind(object,argument1,argument2) // arguments passing are optional we can pass in the returned function also but object is neccessary 
 //  res(argument1,argumen2,)
 
-
-welcome.bind(human1,22,2001) // it will return a fucntion,, so we have to store in a varibale
+welcome.bind(human1,22,2001)// it will return a fucntion,, so we have to store in a varibale
+console.log('--0--')
+welcome.bind(human1,22,2001)() //returned function calling directly without storing in the variable
+console.log('--1--')
 const resultBind = welcome.bind(human1,22,2001)
+console.log(resultBind)
 resultBind() // calling the returned function
 const resultBind1 = welcome.bind(human2) // object passing is compulsary so that it can bind that function to that object 
 console.log(resultBind1)
+console.log('---2--')
 resultBind1(45,2343) // arguments passed to the function welcome... 
 
 console.log(`------------------------------------------------------------------------`)
 
+
 // __ way 4 by using the constructor we can do easily create the objects and calling the functions........______-
 
-console.log(`--------------
-    way 4--------------
+console.log(`----
+    way 4--------
     constructor`)
 
 // -- constructor ,new keyword for creting the object in the simple way  -- 
@@ -140,11 +147,15 @@ console.log(`--------------
 //  started name with capital letter .. 
 //  they are executed with new keyword only 
 
+
 function User(name ,age) {
     // console.log(`hell ouser `,this) // this refers to the current function 
     this.name = name;
     this.age  = age;
     // console.log('first')
+    this.greet =function(){
+        console.log(this.name)
+    }
 }
 
 
@@ -160,6 +171,7 @@ const alien3 = new User("alien3",27)
 console.log(typeof User) // user is a function  normal function 
 console.log(typeof alien1) // alien1 is a object... throughg the new keyword.. calling the user constructor
 console.log(alien1)
+alien1.greet()
 console.log(alien2)
 console.log(alien3)
 

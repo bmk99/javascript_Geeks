@@ -70,7 +70,8 @@ console.log(`pure4Res`, pure4Res);
 
 
 // -- 5.for the same input there should be the same output..
-// 
+
+
 // impure 
 function impure5(arr) {
     arr.push(10,20)

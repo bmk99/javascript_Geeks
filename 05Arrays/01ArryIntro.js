@@ -1,9 +1,9 @@
-let names = ['kiran',"kira","bannn","ha","sa"] // array is non primitive data type
+let names = ['kiran',"kira","bannn","ha","sa"] // array is `non primitive` data type
 //  array starting with index with 0
 
 console.log(`by calling the ${names[2]}`)
 console.log(`normal for loop through condition `)
-
+ 
 
 //  for calling the names from teh array 
 for(let i = 0;i<names.length;i++){
@@ -12,7 +12,7 @@ for(let i = 0;i<names.length;i++){
 }
 
 
-// -------when we don't want any index then at that time we want to print only elements
+// ----when we don't want any index then at that time we want to print only elements
 // for of
 console.log(`-----------elemetns from for of-----`)
 

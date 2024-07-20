@@ -3,11 +3,11 @@
 
 
 const readlinesync = require("readline-sync");
-let age = readlinesync.question("what is your age?  ");
+let age = readlinesync.question("what is your age? ");
 
 let vote =
   age > 18
-    ? "you are eligible to vore"
+    ? "you are eligible to vote"
     : "not eligible to vote please wait some more years";
 
 console.log(vote);
@@ -29,7 +29,7 @@ const remark = marks > 45
         : "Good B")
     : "Average C")
   :"Fail D"
-//  for better readability we can give brackets whenver new terinary opened 
+//  for better readability we can give brackets whenver new condition passed opened 
 //  always remember to end with colon == : == 
 console.log(remarks1)
 console.log(remark)

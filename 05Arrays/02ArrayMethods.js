@@ -9,12 +9,32 @@ fruits.push("melons", "strawberry", "vonkay ");
 const fruits1 = [];
 console.log(fruits);
 
+// _______________________________________________
+// array to string..
+
 // NOTE : 
-// when  using template literal array implicitly converted into toString,
-console.log(fruits)
-console.log(fruits.toString())
-console.log(`by using the template literla 
-            ${fruits}`)
+// by using concatcation
+console.log(['kria',23]+4232)
+
+// toString()
+console.log(['kria',23].toString() + 4232)
+
+// template literal
+let fruits0 = ['apple', 'banana', 'orange'];
+let fruitsString0 = `${fruits0}`;
+console.log(fruitsString0); // Output: "apple,banana,orange"
+
+// by using join 
+let fruits3 = ['apple', 'banana', 'orange'];
+let fruitsString3 = fruits3.join(",")
+console.log(fruitsString3); // Output: "apple,banana,orange"
+
+
+// by using stringify
+let fruits4 = ['apple', 'banana', 'orange'];
+let fruitsString4 = JSON.stringify(fruits4)
+console.log(fruitsString4); // Output: "apple,banana,orange"
+
 
 
 // ______________________________________________________________
@@ -45,43 +65,40 @@ console.log(`after removedItem of goals --${goals}`);
 // _________________________________________________________
 // slice ()
 //slice(startIndex,endIndex)//| end index notIncluded...while giving output
-//  // cutting the cake int o pieces without modifying the original array ,, it return the shallow copy of the array ...
+//  // cutting the cake into pieces without modifying the original array ,, it return the shallow copy of the array ...
 // we are getting new array with sliced items it wouldn't affect the original one
 console.log(`-----slice`);
 const items = ["pepsi", "sprite", "thumsup ", "mango", "orange"];
 let sliceDrinks = items.slice(0, 3); // upto before 3rd index it will slice means it prints 0 to 2
 let slicedFruits = items.slice(3); // start from 3 to end if not mentioned anything
 console.log(sliceDrinks)
+sliceDrinks.push("coaocaola")
 console.log(sliceDrinks.toString())
 console.log(`sliceDrinks --- ${sliceDrinks}`);
 console.log(`slicedFruits  --- ${slicedFruits}`);
+console.log('items',items)
 
 // ____________________________________________________________
 // splice()
-// splice("startInex","delete count",added items1,added items2,.....)
+// splice("startInex","delete items count",added items1,added items2,.....)
 //  used to modify the array by deleteing the items and adding the items
-// it was copy by reference ,, it will log the deleted items.. 
+// it was copy by reference ,
+//  it will log the deleted items.. when we console
 // after splicing it will affect the original array
 
 const vegetables = ["toamto", "vonkaya", "carrot", "mango", "grapes"];
 
 const splicedVege = vegetables.splice(3, 2, "brinjal", "dondakaya");
 //  explanation - 
-// index Start (3) => starting from index 3
-// deleted count (2) => delete two items, start frin index 3 
+// startIndex (3) => starting from index 3 i.e mango
+// delete items count (2) => delete two items, start from index 3 i.e mango,grapes
 // added items("brinjal", "dondakaya") => after delting two items , it wil add items from index 3 onward ,, if the delte count is 0 then ,no elments will remove ... 
 console.log(`removed items ----`,splicedVege);
 console.log(`after removing fruits and adding vegeatable __
   `,vegetables);
   
 const noRemoveOnlyAdd =vegetables.splice(5,0,"bendakaya","sorakaya")
-
-
-
-
 console.log('no elements were removed ', noRemoveOnlyAdd)
-clg
-
 // 
 const vehicles = ["volvo", "bmw", "ninja bikr", "tvs"];
 console.log(vehicles.splice(2)); // last two options are optional
@@ -89,6 +106,8 @@ const bikes = ["activa", "roya enfield", "rx100"];
 console.log(vehicles.splice(2));
 
 // __________________________________________________________
+
+
 //  includes()//
 const flights = ["starship1", "starship2", "starship3", "starship4", "mars"];
 if (flights.includes("starship1")) {
@@ -100,31 +119,44 @@ if (flights.includes("starship1")) {
 // ___________________________________________________________
 // sort()
 //  sorting the items in ascneding order /./
+
+
 const keys = ["zebra", "apple", "ball", "orange", "bananan"];
 keys.sort();
 console.log(keys); // keys.sort mutate the array ,,,
 
-// but for the numbers it was different ...........
+// but for the numbers it was different ...........for positive numbers it will work effectively but negativve numbers it wouldn't
 
-let numbers = [5, 3, 2, 4, 1];
+
+
+let numbers = [1,32,56,-2,-7,-1,34,2];
+console.log(numbers)
 numbers.sort()
 console.log(numbers) //| numbers are not sorted . ..instead they are sorted in the form of index...
 
-// for making the ascending order
+
+console.log("ascending , ")
+// for making the ascending 
+let numbers2 =[1,32,56,-2,-7,-1,34,2]
 function funcAscending(a, b) {
-  console.log(`${a}  - ${b} is ${a - b}`);
+  console.log(`${a} - ${b}  =  ${a - b}`);
   return a - b;
 }
+console.log(numbers2)
+numbers2.sort(funcAscending); // based on the difference whether positive or negtive it will arrange ...
+console.log(numbers2);
+
+let numbers3 =[1,32,56,-2,-7,-1,34,2]
 
 function funcDesecding(a, b) {
-  console.log(`${b} - ${a} is ${b - a}`);
+  console.log(`${b} - ${a} =  ${b - a}`);
   return b - a;
 }
+console.log(numbers3)
+numbers3.sort(funcDesecding);
+console.log(numbers3);
 
-numbers.sort(funcAscending); // based on the difference whether positive or negtive it will arrange ...
-console.log(numbers);
-numbers.sort(funcDesecding);
-console.log(numbers);
+
 // _________________________________________________________________
 // split()  -- string method
 // split("elements",limit) // based on the element it will split whole the string
@@ -150,6 +182,8 @@ console.log(reverseStr.join(""));
 let res = reverseStr === naamMera ? "yes" : "no";
 console.log(res);
 // ________________________________________________________________
+
+
 console.log(`---------split examples--------------`);
 let mess = "hello h1a i 2am w3aiting for you 4au  5a  alaga  6a ayi 7a";
 // error
@@ -178,7 +212,8 @@ let replyJoin = reply.join(" - joined - ")// whatever elements you are passing a
 console.log(`replyJoin with --------
   ${replyJoin}`)
 
-//  let messJoin = mess.join("e") // error  becaz join is array method ...so first we have to convert into the array then join ..
+let mess2 ="i felt nothing. no feel .."
+//  let messJoin = mess.join("e") // error  becaz join is array method ...so first we have to convert the string into the array then join ..
 // console.log(messJoin);// error
 // error
 let messJoin = mess.split(" ").join("-join-")
@@ -189,6 +224,7 @@ console.log(messJoin)
 
 // ___________________________________________________________________________
   
+
 // spread operator//
   // ...  -> spread operator ..means -- we have the peanut butter in the box(Array) , we will spread on the bread .. so array elements are spread line wise into something...
   console.log(`--------spread operator-----------`)
@@ -214,7 +250,7 @@ function sum(...args) {
 }
 sum(2,4,6,8,10)
 
-// _______________________________________________________________________________________
+// ___________________________________________________________________________________
 // destructor operator...
 // destructer the array elements by storing in other varialbles...unpacking the elements
 console.log(`-------------------------destructor-------------------------`)

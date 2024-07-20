@@ -77,13 +77,19 @@ function calculatePower(wrapper,arr) {
     for (let num of arr){
         tempArr.push(wrapper(num))
     }
+    return tempArr
 }
 
 const squareMinRes = calculatePower(squareMin,arr1) 
-console.log(`squareMinRes through the higher order`,squareMinRes)
+console.log(`squareMinRes through the higher order
+  `,squareMinRes)
 
 const cubeMinRes = calculatePower(cubeMin,arr1)
-console.log(`cubeMin thorught the higher order `,cubeMinRes)
+console.log(`cubeMin thorught the higher order
+   `,cubeMinRes)
 
 const fourthMinRes =calculatePower(fourthMin,arr1)
-console.log(`fourth min through the higher order`, fourthMinRes)
+console.log(`fourth min through the higher order
+  `, fourthMinRes)
+
+// ---------------------

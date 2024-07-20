@@ -16,7 +16,7 @@ const details = {
     pincode: 518360,
   },
 };
-console.log(`name iscalled by using the dot --- ${details.name}`);
+console.log(`name is called by using the dot --- ${details.name}`);
 console.log(`calling the years of experience by using bracket-- 
     ${details["years of experience"]}`);
 console.log(`salary by bracket --  ${details["salary_per_Annum"]}`);
@@ -53,7 +53,7 @@ const obj2 = {
   [country]:"india"
 };
 
-console.log(`obj2 is  ${obj2}`); // in template literla it will convert into the to stringify..
+console.log(`obj2 is  ${obj2}`); // in template literla it will convert into the to stringify.........
 console.log(obj2);
 obj2.age = 25; // commuted property // to calculate or assign something or to determine ... 
 console.log(obj2);
@@ -66,7 +66,7 @@ console.log(obj2)
 
 
 // shorthand for object
-
+//| normally creating the object/
 function displaInfo(name, city) {
   return {
     name: name,

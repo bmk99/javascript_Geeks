@@ -1,6 +1,6 @@
 // rest parameter ...
 // ...rest
-// remaining iall converted into the array ..
+// remaining all converted into the array ..
 // rest will convert into the array ..
 // comn
 
@@ -9,7 +9,8 @@ function call(a, b, c, ...rest) {
   console.log(rest);
 }
 call(1, 2, 24, 5, 43, 6, 3, 6, 46, 32, 2, 1);
-
+console.log(`-------
+  `)
 const [a, b, ...others] = ["kiran", "ha", "one", "two", "no"];
 console.log(a);
 console.log(b);
@@ -21,9 +22,10 @@ console.log(`
 //  spread operator will spread the units
 // expand iterables into on e
 
-function call2(a, b) {
+function call2(a,...b) {
   console.log(a);
   console.log(b);
+  // console.log(arr)
 }
 const arr = ["kiran", "ha"];
 

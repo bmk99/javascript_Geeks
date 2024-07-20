@@ -29,4 +29,4 @@ bye();
 }
 console.log(s); // var is global scope...
 // console.log(i)// error = not defined becaz let is block scope
-// console.log(r) // error - not defined..
+// console.log(r) // error - not defined..it's block scope

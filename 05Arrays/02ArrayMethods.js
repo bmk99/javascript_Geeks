@@ -300,8 +300,55 @@ console.log(`araray 1 - ${array1}`)
 console.log(`array2 -- ${array2}`)
 
 
+// ___________________________________________________________________
+// -------------------------------------
+// every(callbackFn)
+//        -> passing elements to the -> callbackFn(element,index,arry)
+// every(callbackFn, thisArg)
+ 
+const items3 = [23,1,1,4,5,2,1,45]
+const items4 = [-23,34,2-23,24,2]
+
+//  .every() -> will check every element in the array ...
+function check3(item ){
+  return item > 0
+}
+let res3 = items3.every(check3)
+let res4 = items4.every(check3)
+console.log({res3}) // all values are positve 
+console.log({res4}) //| negative values are there
 
 
+// to check whether items5 array  in decresing order 
 
+
+const items5 =[34,23,2,-1,-7]
+const res5 = items5
+                  .filter(elm => elm>0)
+                  .every((elm,index,arr)=> {
+                    console.log({elm})
+                    console.log({index})
+                    console.log({arr})
+
+
+                    if(index ==0) {return true}
+                    return arr[index-1] > elm
+                  })
+
+console.log(res5)
+
+
+// --- extra for non array objects.....
+
+const arrayLike = {
+  length: 4,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 345, // ignored by every() since length is 3
+};
+console.log(
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+); // true
 
 

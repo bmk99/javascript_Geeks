@@ -16,6 +16,7 @@ const details = {
     pincode: 518360,
   },
 };
+
 console.log(`name is called by using the dot --- ${details.name}`);
 console.log(`calling the years of experience by using bracket-- 
     ${details["years of experience"]}`);
@@ -43,11 +44,11 @@ obj1.displaInfo();
 obj1["displaInfo"]();// we call the method like this also.
 obj1.details();
 
-//   computed property
+// --- computed property
 console.log(`------------ `);
 
 let country ="country"
-const obj2 = {
+let obj2 = {
   name: "ha",
   city: "hyderabad",
   [country]:"india"
@@ -62,10 +63,12 @@ console.log(obj2);
 const job = 'job'
 obj2[job]="software" // dynamically or not ???...
 console.log(obj2)
+obj2  = {}
+console.log(obj2)
 
 
 
-// shorthand for object
+// --creting multiple objects with the same properties.
 //| normally creating the object/
 function displaInfo(name, city) {
   return {
@@ -88,3 +91,4 @@ const res2 = meetInfo("dlf", "evening");
 console.log(res2);
 console.log(`callin ge the res2 ---${res2.place}`);
 
+// 

@@ -11,6 +11,9 @@ for (let char of name) {
     break;
   }
 }
+for(let index in name){
+  console.log('index ...',index, "-- " , name[index])
+}
 console.log(`count of a in name ${count}`);
 console.log(`4th position char at name si ' ${name[3]} '`);
 

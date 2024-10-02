@@ -11,7 +11,6 @@ for (let key in obj1) {
   console.log(`key is  -${key}- and value is -${obj1[key]}- `);
 }
 
-
 // remaining for loops willnot work in objects.........
 // copy by reference............ ...
 
@@ -21,7 +20,7 @@ console.log("obj2", obj2);
 obj2.age = 25;
 console.log("obj2 after adding age", obj2);
 
-console.log("obj1... - ", obj1); // when changing obj2 obj1 also changing.....
+console.log("obj1... - ", obj1); // when changing obj2,then  obj1 also changing.....
 
 // so while changing copying object orinial object also changes.. to avoid that ...we have to use assign method...
 
@@ -58,6 +57,7 @@ console.log(`copying by assing changing address...`, person2);
 // __ pending deep copy ..
 
 let person3 = JSON.parse(JSON.stringify(person1));
+console.log({ person3 });
 
 // person3.
 
@@ -72,32 +72,16 @@ const obj4 = {
     food: "chapathi, toamto curry",
     crush: "someone",
     place: "kanyakumari",
-    // games:"shuttle" //check purpose
   },
-
-  // checking nested one - start
-  // books:{
-  //     crime :2,
-  // fantasy:4
-  // },
-  // check done
-
-  info: function () {
-    console.log(` i am  the info`);
-  },
-  //  checking fucntion
-  // moreInfo:function () {
-  // console.log(`i am wolf alaways hididng`)
-  // }
+  info :function (){
+    console.log('infooo')
+  }
 };
 
 console.log(`checking the age  --`, obj4.age); // for properties it shows directly undefined ..but it doesn't happen in the case of neseted properties
-console.log(`checking the favorite  in games --`, obj4.favorite.games);
-// console.log(`checking the books --`,obj4.books.crime) // error .. when wetry to find the property which having nested object ... it thrws the error ,, same thing we can write using the optional chaining....
-console.log(`checkign the books having the crime--`, obj4.books?.crime);
-
-// calling the info function
-obj4.info();
+console.log(`checking the favorite  in games --`, obj4.favorite.games); // here favorite key was already their. so inside that they also be undefined.
+// console.log(`checking the books --`,obj4.books.comedy) // error .. when wetry to find the property which having nested object ... it thrws the error ,, same thing we can write using the optional chaining....
+console.log(`checkign the books having the crime--`, obj4.books?.comedy);
 
 // checking whether the function is present or not
 // obj4.moreInfo() // error it is not defined throws error
@@ -115,6 +99,7 @@ console.log(
   `checkign the books having the fantasy--`,
   obj4["books"]?.["fantasy"]
 );
+obj4.info()  // by dot method also it works...............
 obj4["info"](); // property should called by the string format then calling the function
 obj4["moreinfo"]?.();
 console.log("after more info");

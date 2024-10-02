@@ -2,7 +2,7 @@
 
 //  Consditional operator 
 //  if , else , else if
-const readlinesync = require("readline-sync")
+const readlinsync = require("readline-sync")
 const prompt = require("prompt")
 let number = prompt("Enter the number")
 

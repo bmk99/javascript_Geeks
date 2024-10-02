@@ -115,3 +115,10 @@ do{
     console.log(`k value is ${k}`)
 }while(k<10)
  console.log(`do while loop print the 10 because it will print first then check the condition in the while `)
+
+
+ let s =[1,2,2,3,4]
+ s.forEach(element => {
+    console.log(element)
+    
+ });

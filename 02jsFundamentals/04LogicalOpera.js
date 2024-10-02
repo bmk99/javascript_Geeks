@@ -62,18 +62,23 @@ if (!eligible) {
 // _______________________________________
 
 // ---------  ?? NULLISH OPERATOR-----------
-//  it only works when some value is undefined or null otherwise it will log the other value
+//  syntax .. value ?? message
+// we will get the message when value is -udefined- or -null- otherwise we will get the value only. 
 
 let car = "tata"
 let bike = undefined
 let suv = null
 let rating = 0
+let value =""
+let bool = false
 
-console.log(car ?? "car name is not mentioned")
-console.log(bike ?? "bike--- name is not mentioned ")
-console.log(suv ?? "suv---- name not mentioned.")
-
-console.log(rating ||  "by using or --rating not revieled yet wait for some time") // here if we use _OR_ operator ,so boolean of _0_ is false so  it will print the message 
+console.log(car ?? "car- is coming soon ,")
+console.log(bike ?? "bike-is coming soon  ")
+console.log(suv ?? "suv-- is coming soon ")
+console.log(value ?? "nothing here")
+console.log(bool ?? "nothing here")
+console.log(`checking with or  ,  ??`)
+console.log(rating ||  "by using or --rating not revieled") // here if we use _OR_ operator ,so boolean of _0_ is false so  it will print the message 
 console.log(rating ?? "price not revieled yet wait for some time") // here if we are not using _OR_ operator becaz it will print the message, so to avoid in this cases we use nullish
 
 
@@ -144,7 +149,8 @@ console.log(rating ?? "price not revieled yet wait for some time") // here if we
 // _____________________________________________________________
 
 // --------------AND OPEERATOR CASES .....................
-// while running comment all the cases and uncomment only which you want to check
+
+// while running comment the cases and uncomment only which you want to check and select that case and run. see the output in the console.
 
 // Q1. How `AND` operator works?
 // Sol. if among all the values, every values is true.
@@ -168,14 +174,27 @@ console.log(rating ?? "price not revieled yet wait for some time") // here if we
 // ----case 2---->
 // scene:when one value is false 
 
-// let firstName = ""
-// let nickName = "d"
-// let surname  ="haha"
 
-// let name = firstName && nickName && surname
+let firstName = ""
+let nickName = "d"
+let surname  ="haha"
 
-// // it will log the empty string 
-// console.log(`name is ${name}`)
+let name = nickName && firstName && surname
+
+//| nothing but logical and operator...
+// short circuit..............
+
+let obj = {name : "kria"}
+let b = true
+let a =  b && (obj.pare  = "parent")
+
+console.log(a)
+console.log(obj)
+
+b && (console.log('hey dude'))
+
+// it will log the empty string 
+console.log(`name is ${name}`)
 
 
 // ----case 3---->

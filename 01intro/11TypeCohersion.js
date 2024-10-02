@@ -5,6 +5,7 @@
 
 // ---string to Number
 
+
 let a = "10"
 let b = "30"
 
@@ -12,13 +13,15 @@ let b = "30"
 let c = Number(a)
 let d = Number(b)
 
+
 console.log(typeof a)
 console.log(typeof b)
 console.log(typeof c)
 console.log(typeof d)
- 
+
 console.log(parseInt(5/2))
 console.log(typeof(2.43))
+
 console.log("--------------------")
 
 //  --- Number  to String 
@@ -49,7 +52,8 @@ let o = Boolean(k)
 let p = Boolean(l)
 
 
-//  Note: - 0 is not a number i.e it shows false but remaing nunber values is true
+//  Note: - 0 is not a number i.e it shows false but remaining nunber values is true
+
 console.log(m)
 console.log(n)
 console.log(o)

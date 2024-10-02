@@ -24,14 +24,14 @@ console.log(`person0 --`, person0);
 // error check end
 
 // correct way to destrucrtin way1  start
-
-// let {name,city,occupation,movies,favorites} = person0
-// console.log(`after destructing by their real key name ....`)
-// console.log(name)
-// console.log(city)
-// console.log(occupation)
-// console.log(movies)
-// console.log(favorites)
+// --------------info 0 --------------------------
+let { name, city, occupation, movies, favorites } = person0;
+console.log(`after destructing by their real key name ....`);
+console.log(name);
+console.log(city);
+console.log(occupation);
+console.log(movies);
+console.log(favorites);
 
 // way1 end
 
@@ -58,9 +58,10 @@ console.log(likes);
 
 //  more examples
 console.log(`more info `);
-// -----------------------------------------------------------
+// -----------------------Info 1--------------------------------
 console.log(`-------------
-    info -1 `);
+    info -1
+-------------`);
 let person1 = {
   age: 34,
   place: "hyderabad",
@@ -69,9 +70,11 @@ let { age } = person1; //| no need to give all the keys in the object we can byp
 console.log(`person1`, person1);
 console.log(`age :`, age);
 
-// ----------------------------------------
+// ----------------Info 2--------------------
 console.log(`------------
-    info - 2`);
+    info - 2
+-------------`);
+
 const person2 = {
   education: "b.Tech",
   salary: 210000,
@@ -84,11 +87,12 @@ const person2 = {
 const { education, ...rest } = person2; // by using the spread operator we can conclude at last whatever left
 console.log(`person 2 `, person2);
 console.log(`education --`, education);
-console.log(`remaining -`, rest);
+console.log(`remaining -`, rest); // gives in the form of object.. because we are destructing the object not array,,
 
-// -----------------------------------------------------------------
+// --------------------Info 3----------------------------------------
 console.log(`-------------
-    info 3 `);
+    info 3
+-------------`);
 const person3 = {
   contact: {
     linkedin: "madhu-kiran",
@@ -103,22 +107,25 @@ const person3 = {
   sister: "sravani",
 };
 let {
-  contact: { linkedin, x, snapchat, github },
+  contact: { linkedin, x,...others},
   destinationCity,
   games: [game1],
-} = person3; // in contact we are destrucring inside the contact object....
+} = person3; // in contact we are destructing inside the contact object....
 console.log(`person 3`, person3);
+// console.log('contact', contact.snapchat)// error once we destructed we are not able to call teh ones..values
 // console.log(contact.linkedin) // error it throws undefined becaz contact is again destrured so we need call by their nested key value
 console.log(`contact linkedin --`, linkedin); // by nested object destructing
 console.log(`contact x`, x);
 // console.log(`calling the games `,games)
-
+console.log("others", others);
 console.log(`inside the games array calling by destructing == `, game1); // by array destrucritng
+console.log(person3.games[1]) // we can call directly...
 
-// ------------------------------------------------------------------
+// -----------------------Info 5 -------------------------------------------
 
 console.log(`----------
-    info 5`);
+    info 5
+-------------`);
 const person5 = {
   office: {
     emp1: {
@@ -179,28 +186,29 @@ console.log(`person emp2 - `, perEmp2);
 
 console.log(`youtube - `, youEmp1);
 console.log(`youtube emp2 - `, youEmp2);
-//  ----------------
+//  ----------------calling the object values..and keys .......
 
 // calling the object /
 
-const GamesDetails ={
-  cricket :11,
-  volleyball : 6,
-  kabaddi:7,
-  tabletennis :1,
-  football :11,
+const GamesDetails = {
+  cricket: 11,
+  volleyball: 6,
+  kabaddi: 7,
+  tabletennis: 1,
+  football: 11,
+};
 
+for (let key in GamesDetails) {
+  console.log({ key });
+  console.log(GamesDetails[key]);
 }
 
-const entries = Object.entries(GamesDetails)
-console.log(entries) // it wil give key and values in the form of arrays as 
+const entries = Object.entries(GamesDetails);
+console.log(entries); // it wil give key and values in the form of arrays as
 // key and value in array,, like that..
 
-const keys = Object.keys(GamesDetails)
-console.log(keys) // keys or properties or member. return in the form of arrays
-const values = Object.values(GamesDetails)
-console.log(values) // only values
-console.log(Math.max(...values)) // from the array we can get the math properties //
-
-
-
+const keys = Object.keys(GamesDetails);
+console.log(keys); // keys or properties or member. return in the form of arrays
+const values = Object.values(GamesDetails);
+console.log(values); // only values
+console.log(Math.max(...values)); // from the array we can get the math properties //

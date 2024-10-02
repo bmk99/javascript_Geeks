@@ -32,6 +32,8 @@ console.log(`char3 is ${char3}`)
 // to find the ascii value for a code 
 console.log(`--------`)
 
+
+
 let asciiCode = message.charCodeAt(index)
 let asciiCode2 = message2.charCodeAt(index2)
 let asciiCode3 = message3.charCodeAt(index3)
@@ -47,14 +49,16 @@ console.log(`ascii code3 fo ${asciiCode}`)
 console.log(`asciiCode of char '${char}' is ${asciiCode} and it's value is `)
 console.log(`asciiCode of char '${char2}' is ${asciiCode2}`)
 console.log(`asciiCode of char '${char3}' is ${asciiCode3}`)
-
-
 // ..
-let character = "Asdfas"
+let character = "AsdAfas"
 let number = 65
-console.log(`the ascci value of ${number} is ${String.fromCharCode(97)}`)
-console.log(`the accii code for char ${character} is ${character.charCodeAt()}`)
+console.log(`the ascci value of ${number} is ${String.fromCharCode(97,65,65,65)}`)
+console.log(`the accii code for char ${character} is ${character.charCodeAt(3)}`)
 console.log(`the accii code for char ${character} is ${"Z".charCodeAt()}`)
 
 
 
+
+
+
+console.log()

@@ -186,3 +186,51 @@ console.log(totalPlates1)
 
 
 // ---for coverting array to string
+
+const arr1 = [
+  { id: 1, name: "kiran" },
+  { id: 2, name: "sra" },
+  { id: 3, name: "kaaa" }
+];
+
+const arr2 = [
+  { id: 1, city: 100 },
+  { id: 2, age: 35 },
+  { id: 4, age: 67 }
+];
+
+// Create a lookup object for arr1 and arr2
+const lookup = {};
+
+// Add all items from arr1 to lookup
+arr1.forEach(item => {
+  lookup[item.id] = { ...item };
+});
+console.log(lookup)
+
+// Add all items from arr2 to lookup, combining with existing entries
+arr2.forEach(item => {
+  if (lookup[item.id]) {
+    lookup[item.id] = { ...lookup[item.id], ...item };
+  } else {
+    lookup[item.id] = { ...item };
+  }
+});
+
+// Convert lookup object back to an array
+const combinedArray = Object.values(lookup);
+
+console.log(combinedArray);
+
+// Output:
+// [
+//   { id: 1, name: 'kiran', city: 100 },
+//   { id: 2, name: 'sra', age: 35 },
+//   { id: 3, name: 'kaaa' },
+//   { id: 4, age: 67 }
+// ]
+
+
+
+
+

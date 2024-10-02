@@ -1,5 +1,5 @@
 // arguments object..
-// this will work only for normal functino
+// this will work only for normal functins nto for arrow functions..
 // arguments conains all the values passed to the function
 
 function meetInfo(a, b) {
@@ -78,3 +78,20 @@ function meetInfo4(s = 30) {
   console.log(s);
 }
 meetInfo4();
+
+
+// ---------
+const greet =(x,y) =>{
+  console.log(arguments[2])
+
+}
+greet(1,2,3)
+
+
+function greet1(x,y) {
+  console.log(arguments[2])
+
+}
+greet1(1,2,3)
+
+

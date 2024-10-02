@@ -38,6 +38,7 @@ console.log(fruitsString4); // Output: "apple,banana,orange"
 
 
 // ______________________________________________________________
+
 // concat
 // .concat(elem1,elem2,....)
 // adding the array elements into one one array
@@ -63,6 +64,7 @@ console.log(`completed Item of goals is --- ${removedItem}`);
 console.log(`after removedItem of goals --${goals}`);
 
 // _________________________________________________________
+
 // slice ()
 //slice(startIndex,endIndex)//| end index notIncluded...while giving output
 //  // cutting the cake into pieces without modifying the original array ,, it return the shallow copy of the array ...
@@ -82,13 +84,13 @@ console.log('items',items)
 // splice()
 // splice("startInex","delete items count",added items1,added items2,.....)
 //  used to modify the array by deleteing the items and adding the items
-// it was copy by reference ,
+// it was copy by reference , 
 //  it will log the deleted items.. when we console
 // after splicing it will affect the original array
 
-const vegetables = ["toamto", "vonkaya", "carrot", "mango", "grapes"];
+const vegetables = ["toamto", "vonkaya", "carrot", "mango", "grapes","dragaon"];
 
-const splicedVege = vegetables.splice(3, 2, "brinjal", "dondakaya");
+const splicedVege = vegetables.splice(3, 2, "brinjal", "dondakaya","califlower");
 //  explanation - 
 // startIndex (3) => starting from index 3 i.e mango
 // delete items count (2) => delete two items, start from index 3 i.e mango,grapes
@@ -104,6 +106,8 @@ const vehicles = ["volvo", "bmw", "ninja bikr", "tvs"];
 console.log(vehicles.splice(2)); // last two options are optional
 const bikes = ["activa", "roya enfield", "rx100"];
 console.log(vehicles.splice(2));
+
+
 
 // __________________________________________________________
 
@@ -157,50 +161,11 @@ numbers3.sort(funcDesecding);
 console.log(numbers3);
 
 
-// _________________________________________________________________
-// split()  -- string method
-// split("elements",limit) // based on the element it will split whole the string
-// split will convert string into array of characters....
-//  join()-----------
-// join is a array method ...convert the array into the string ....
-console.log(`[--- split()----------------] and Join() -------------`);
-const message = "starship will definetly go to mars by 2026  ";
-console.log(message);
-let messageArr = message.split(" "); // split will divide based on the space
-console.log(messageArr);
-let messageArrReverse = messageArr.reverse();
-console.log(messageArrReverse);
-let messageArrJoin = messageArr.join(" ");
-console.log(messageArrJoin);
-
-let naamMera = "malayalam";
-let naamMeraArr = naamMera.split("");
-console.log(naamMeraArr);
-let reverseStr = naamMeraArr.reverse();
-console.log(reverseStr);
-console.log(reverseStr.join(""));
-let res = reverseStr === naamMera ? "yes" : "no";
-console.log(res);
 // ________________________________________________________________
 
 
-console.log(`---------split examples--------------`);
+// .join()
 let mess = "hello h1a i 2am w3aiting for you 4au  5a  alaga  6a ayi 7a";
-// error
-
-// syntax - string.split("string_name",count) 
-// string_name = character/string/space/etc......
-// count is upto how many times it will split at particular string.. 
-let messSplit_a4 = mess.split('a',4) // it will split at 'a' i.e remove a from the string // it will split first  two a only 
-console.log(mess)
-console.log(messSplit_a4,"it will split 2 times only ..")
-
-let messSplit_a = mess.split('a')
-console.log(messSplit_a)
-let messSplit_space = mess.split(" ") // it will split at single space ' '
-console.log(mess)
-console.log(messSplit_space)
-
 
 console.log(`------------join examples-------------------`)
 
@@ -241,16 +206,16 @@ console.log(india)
 //  in function calling it was used.. 
 function sum(...args) {
   // we don't know how many arguments are coming... 
-  console.log("normal into the array , sum ---",args) // args automatically converted into the array ... 
+  console.log("normal into the array , sum ---",args) //by using spread operator these args are automatically converted into the array ... 
   let sum =0;
   args.forEach((x)=> sum += x)
   console.log("summ ",sum)
-
-
+  
 }
 sum(2,4,6,8,10)
 
 // ___________________________________________________________________________________
+
 // destructor operator...
 // destructer the array elements by storing in other varialbles...unpacking the elements
 console.log(`-------------------------destructor-------------------------`)
@@ -341,14 +306,38 @@ console.log(res5)
 // --- extra for non array objects.....
 
 const arrayLike = {
-  length: 4,
+  length: 3,
   0: "a",
   1: "b",
   2: "c",
   3: 345, // ignored by every() since length is 3
 };
+
 console.log(
   Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
 ); // true
 
 
+// -----------------
+//  shift()
+let items6 = [1,2,3,4,5,6]
+
+console.log(items6.shift()) // remove element from start , no arguments are passed ..
+console.log(items6) 
+
+// -----------------
+// unshift(...numbers)
+let items7 = [1,2,3,4,5,6]
+console.log(items7.unshift(7,8,9)) // add elments at the start
+console.log(items7)
+
+
+// ------------
+// for removing the item
+// filter() 
+let items8 = [1,2,3,4,5,6,3,3,3,3]
+
+let items9 = items8.filter(ele => ele !== 3)
+console.log(items9)
+
+// ----------------------

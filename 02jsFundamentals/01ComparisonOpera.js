@@ -24,7 +24,7 @@ console.log(2029 != 2023)
 
 console.log(2029 <= 2029)
 
-console.log(2029 >= 2029)
+console.log(2029  >= 2029)
 
 
 console.log("1-------------------")
@@ -69,18 +69,14 @@ console.log("4---------")
 
 
 //  commparing with equal 
-console.log(null  == 0)
-
-console.log(null === 0 )
-
+console.log(null  == 0) 
+console.log(Boolean(null))
+console.log(null === 0)
+console.log(false == false)
 console.log(null == undefined)
-
-
-// while compiling  `null` is converting into `0` 
-console.log(null > 0 )
-
+// while compiling  `null` is converting into `0` in comparing with < or > 
+console.log(null > 0)
 console.log(null < 1)
-
 
 //  ... Bollean of some values 
 console.log(`Boolean of 0`,Boolean(0))
@@ -91,5 +87,3 @@ console.log(`Boolean of number`,Boolean(9))
 console.log(`Boolean of any acii value`,Boolean(" "))
 console.log(`Boolean of any false`,Boolean(false))
 console.log(`Boolean of any true`,Boolean(true))
-
-

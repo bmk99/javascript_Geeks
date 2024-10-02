@@ -15,6 +15,8 @@ function calculatePower(wrapper,arr) {
 const squareMinRes = calculatePower(squareMin,arr1) 
 console.log(`squareMinRes through the higher order`,squareMinRes)
 
+
+
 // --------------------------
 
 

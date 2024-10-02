@@ -46,6 +46,7 @@ case1.meetArrow()
 console.log(`
     case 2 ------------`)
 // when we write the function inside the method i.e it refered as nested function...so  we can't acces the current obj by using this keyword inside that nested fucntiion.
+
 const case2 ={
     name :"kiraha",
     displayInfo:function () {
